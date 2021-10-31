@@ -18,7 +18,6 @@ const CategoryRow = ({ title, fetchUrl, isOriginals = false }) => {
                 }
                 const data = await response.json();
                 setCategories(data.results);
-                console.log(data.results);
             } catch (error) {
                 console.log(error.message);
             }
