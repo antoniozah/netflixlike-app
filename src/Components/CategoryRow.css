@@ -1,0 +1,83 @@
+.row {
+  color: white;
+  padding-left: 1rem;
+}
+
+.row > h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.loader {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.row__posters {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: scroll;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.row__contents {
+  margin-right: 1rem;
+  padding: 1rem 0;
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.row__contents:last-of-type {
+  margin-right: 0;
+}
+
+.row__poster {
+  height: 400px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.row__poster:hover {
+  transform: scale(1.06);
+  cursor: pointer;
+}
+
+.lgksPe:hover:enabled,
+.lgksPe:focus:enabled {
+  background-color: rgba(55, 55, 55, 1) !important;
+}
+
+/* square buttons */
+.rec.rec-arrow {
+  border-radius: 0;
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover {
+  border-radius: 50%;
+}
+/* hide disabled buttons */
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+/* disable default outline on focused items */
+/* add custom outline on focused items */
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
+}
+
+@media (max-width: 550px) {
+  .row > h2 {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .rec.rec-arrow {
+    display: none;
+  }
+}
